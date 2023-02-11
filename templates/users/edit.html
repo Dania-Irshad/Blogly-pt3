@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1>Edit a user</h1>
+    <form method="POST">
+        <div class="mb-3">
+            <label for="first_name" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="first_name" name="first_name" value="{{ user.first_name }}"
+                autocomplete="off" required>
+        </div>
+        <div class="mb-3">
+            <label for="last_name" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="last_name" name="last_name" value="{{ user.last_name }}"
+                autocomplete="off" required>
+        </div>
+        <div class="mb-3">
+            <label for="image_url" class="form-label">Image URL</label>
+            <input type="text" class="form-control" id="image_url" name="image_url" value="{{ user.image_url }}"
+                placeholder="Provide an image of this user." autocomplete="off">
+        </div>
+        <a href="/users/{{ user.id }}" class="btn btn-light">Cancel</a>
+        <button type="submit" class="btn btn-info">Save</button>
+    </form>
+</div>
+
+{% endblock %}

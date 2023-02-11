@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="ms-2 mt-2">
+    <a href="/users" class="btn btn-secondary">Go Back</a>
+</div>
+<div class="container">
+    <h1>Create a user</h1>
+    <form method="POST">
+        <div class="mb-3">
+            <label for="first_name" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Enter a first name"
+                autocomplete="off" required>
+        </div>
+        <div class="mb-3">
+            <label for="last_name" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Enter a last name"
+                autocomplete="off" required>
+        </div>
+        <div class="mb-3">
+            <label for="image_url" class="form-label">Image URL</label>
+            <input type="text" class="form-control" id="image_url" name="image_url"
+                placeholder="Provide an image of this user." autocomplete="off">
+        </div>
+        <button type="submit" class="btn btn-info">Add</button>
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1>Edit a tag</h1>
+    <form method="POST">
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" style="width: 40%;" id="name" name="name" autocomplete="off"
+                placeholder="{{tag.name}}" required>
+        </div>
+        <a href="/tags/{{tag.id}}" class="btn btn-info">Cancel</a>
+        <button type="submit" class="btn btn-success">Edit</button>
+    </form>
+</div>
+
+{% endblock %}
